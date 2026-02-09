@@ -1,10 +1,11 @@
 {
   "schemaVersion": 1,
+  "configVersion": "2026.02.09",
   "featuredUpdateId": "2026-02-09-reposcan",
-  "historyUrl": "https://example.com/updates",
   "updates": [
     {
       "id": "2026-02-09-reposcan",
+      "version": "1.3",
       "title": "Reposcan Upgrade",
       "body": "Easily do diligence on tokens by hovering the GitHub icon.",
       "publishedAt": "2026-02-09",
@@ -27,6 +28,14 @@
           "media": {
             "type": "gif",
             "src": "https://cdn.example.com/updates/flags.gif"
+          }
+        },
+        {
+          "title": "Cleaner UI",
+          "body": "Static walkthroughs now supported.",
+          "media": {
+            "type": "image",
+            "src": "https://cdn.example.com/updates/screenshot.png"
           }
         }
       ],
