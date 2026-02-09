@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "featuredUpdateId": "2026-02-09-reposcan",
+  "historyUrl": "https://example.com/updates",
+  "updates": [
+    {
+      "id": "2026-02-09-reposcan",
+      "title": "Reposcan Upgrade",
+      "body": "Easily do diligence on tokens by hovering the GitHub icon.",
+      "publishedAt": "2026-02-09",
+      "enabled": true,
+      "showOnce": true,
+      "slides": [
+        {
+          "title": "Quick Repo Scan",
+          "body": "Get a full token breakdown instantly.",
+          "media": {
+            "type": "video",
+            "src": "https://cdn.example.com/updates/scan.mp4",
+            "poster": "https://cdn.example.com/updates/scan.jpg",
+            "aspectRatio": "16/9"
+          }
+        },
+        {
+          "title": "Security Flags",
+          "body": "Spot risks before you trade.",
+          "media": {
+            "type": "gif",
+            "src": "https://cdn.example.com/updates/flags.gif"
+          }
+        }
+      ],
+      "cta": {
+        "label": "Finish",
+        "action": "dismiss"
+      }
+    }
+  ]
+}
