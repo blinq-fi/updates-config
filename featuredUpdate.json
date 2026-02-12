@@ -1,47 +1,408 @@
 {
-  "schemaVersion": 1,
-  "configVersion": "2026.02.09",
-  "featuredUpdateId": "2026-02-09-reposcan",
+  "schemaVersion": 3,
+  "configVersion": "2026.02.11",
+  "featuredUpdateId": "2026-02-11-portfolio-v2",
+  "historyUrl": "https://blinq.fi/changelog",
   "updates": [
     {
-      "id": "2026-02-09-reposcan",
-      "version": "1.3",
-      "title": "Reposcan Upgrade",
-      "body": "Easily do diligence on tokens by hovering the GitHub icon.",
-      "publishedAt": "2026-02-09",
+      "id": "2026-02-11-portfolio-v2",
+      "version": "2.0.0",
+      "title": "Portfolio V2",
+      "description": "Track holdings, PnL, and positions — all in one place.",
+      "publishedAt": "2026-02-11T00:00:00Z",
+      "expiresAt": "2026-04-01T00:00:00Z",
       "enabled": true,
-      "showOnce": true,
+      "priority": 1,
+
+      "rules": {
+        "minAppVersion": "1.3.0",
+        "showOnce": true,
+        "dismissible": true,
+        "platforms": ["web"],
+        "audience": {
+          "roles": ["retail", "pro"],
+          "minTradingVolumeUsd": 0
+        }
+      },
+
+      "theme": {
+        "accent": "emerald",
+        "backgroundVariant": "subtle-gradient",
+        "layout": "media-right"
+      },
+
+      "analytics": {
+        "impressionEvent": "update_portfolio_v2_viewed",
+        "dismissEvent": "update_portfolio_v2_dismissed",
+        "ctaEvent": "update_portfolio_v2_cta_clicked"
+      },
+
       "slides": [
         {
-          "title": "Quick Repo Scan",
-          "body": "Get a full token breakdown instantly.",
+          "id": "portfolio-unified-view",
+          "layout": "media-right",
+          "badge": {
+            "label": "New",
+            "tone": "success"
+          },
+          "title": "Unified Portfolio View",
+          "subtitle": "Everything at a glance",
+          "body": "See token balances, active positions, and historical PnL in a single dashboard.\nReal-time sync across all connected wallets.\nOne-click export for tax reporting.",
+
           "media": {
             "type": "video",
-            "src": "https://cdn.example.com/updates/scan.mp4",
-            "poster": "https://cdn.example.com/updates/scan.jpg",
-            "aspectRatio": "16/9"
+            "src": "https://axiom-videos.sfo3.cdn.digitaloceanspaces.com/update-41/github-x402.mp4",
+            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/10b981?text=Fallback&font=raleway",
+            "alt": "Portfolio dashboard showing balances and PnL chart",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "portfolio_slide1_viewed"
           }
         },
         {
-          "title": "Security Flags",
-          "body": "Spot risks before you trade.",
-          "media": {
-            "type": "gif",
-            "src": "https://cdn.example.com/updates/flags.gif"
-          }
-        },
-        {
-          "title": "Cleaner UI",
-          "body": "Static walkthroughs now supported.",
+          "id": "portfolio-live-pnl",
+          "layout": "media-right",
+          "badge": {
+            "label": "Improved",
+            "tone": "info"
+          },
+          "title": "Real-Time PnL Tracking",
+          "subtitle": "Never miss a move",
+          "body": "Live profit and loss updates across all positions.\nBreakdown by token, chain, and strategy.\nCustom alerts when PnL hits your thresholds.",
+
           "media": {
             "type": "image",
-            "src": "https://cdn.example.com/updates/screenshot.png"
+            "src": "https://placehold.co/800x450/0a0a0a/3b82f6?text=PnL+Tracking&font=raleway",
+            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=PnL+Preview&font=raleway",
+            "alt": "Real-time PnL chart with live updates",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "portfolio_slide2_viewed"
+          }
+        },
+        {
+          "id": "portfolio-token-scan",
+          "layout": "media-right",
+          "badge": {
+            "label": "Beta",
+            "tone": "warning"
+          },
+          "title": "Quick Token Scan",
+          "subtitle": "Due diligence made easy",
+          "body": "Hover the GitHub icon to instantly see repo health and security flags.\nAudit scores, liquidity depth, and holder distribution at a glance.",
+
+          "media": {
+            "type": "image",
+            "src": "https://placehold.co/800x450/0a0a0a/f59e0b?text=Token+Scan&font=raleway",
+            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=Scan+Preview&font=raleway",
+            "alt": "Token scan showing repo health and security flags",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "portfolio_slide3_viewed"
           }
         }
       ],
+
       "cta": {
-        "label": "Finish",
-        "action": "dismiss"
+        "label": "Explore Portfolio",
+        "action": {
+          "type": "navigate",
+          "payload": {
+            "url": "/portfolio"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "2026-02-11-candle-rush",
+      "version": "2.0.0",
+      "title": "Candle Rush",
+      "description": "Predict the next candle direction and win up to 1.95x your bet.",
+      "publishedAt": "2026-02-11T00:00:00Z",
+      "enabled": true,
+      "priority": 2,
+
+      "rules": {
+        "showOnce": true,
+        "dismissible": true
+      },
+
+      "theme": {
+        "accent": "purple",
+        "backgroundVariant": "glass",
+        "layout": "full-width"
+      },
+
+      "analytics": {
+        "impressionEvent": "update_candle_rush_viewed",
+        "dismissEvent": "update_candle_rush_dismissed",
+        "ctaEvent": "update_candle_rush_cta_clicked"
+      },
+
+      "slides": [
+        {
+          "id": "candle-rush-intro",
+          "badge": {
+            "label": "Live",
+            "tone": "danger"
+          },
+          "title": "Candle Rush is Here",
+          "subtitle": "Fast-paced prediction game",
+          "body": "Pick UP or DOWN on the next 1-minute candle.\n1.95x payout on correct predictions.\nNo slippage, no spreads — pure prediction.",
+
+          "media": {
+            "type": "image",
+            "src": "https://placehold.co/900x500/0a0a0a/a855f7?text=Candle+Rush&font=raleway",
+            "fallbackSrc": "https://placehold.co/900x500/1a1a2e/a1a1aa?text=Candle+Rush&font=raleway",
+            "alt": "Candle Rush game interface",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "candle_rush_slide1_viewed"
+          }
+        },
+        {
+          "id": "candle-rush-leaderboard",
+          "badge": {
+            "label": "Compete",
+            "tone": "info"
+          },
+          "title": "Weekly Leaderboards",
+          "subtitle": "Climb the ranks",
+          "body": "Top predictors earn bonus rewards every week.\nTrack your win rate and streak in real time.",
+
+          "media": {
+            "type": "image",
+            "src": "https://placehold.co/900x500/0a0a0a/8b5cf6?text=Leaderboard&font=raleway",
+            "fallbackSrc": "https://placehold.co/900x500/1a1a2e/a1a1aa?text=Leaderboard&font=raleway",
+            "alt": "Leaderboard showing top predictors",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "candle_rush_slide2_viewed"
+          }
+        }
+      ],
+
+      "cta": {
+        "label": "Play Candle Rush",
+        "action": {
+          "type": "navigate",
+          "payload": {
+            "url": "/candle-rush"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "2026-02-10-smart-accounts",
+      "version": "1.9.0",
+      "title": "Smart Account Integration",
+      "description": "Gasless transactions and session keys powered by ZeroDev.",
+      "publishedAt": "2026-02-10T00:00:00Z",
+      "enabled": true,
+      "priority": 3,
+
+      "rules": {
+        "showOnce": true,
+        "dismissible": true
+      },
+
+      "theme": {
+        "accent": "blue",
+        "backgroundVariant": "subtle-gradient",
+        "layout": "media-left"
+      },
+
+      "analytics": {
+        "impressionEvent": "update_smart_accounts_viewed",
+        "dismissEvent": "update_smart_accounts_dismissed",
+        "ctaEvent": "update_smart_accounts_cta_clicked"
+      },
+
+      "slides": [
+        {
+          "id": "smart-accounts-gasless",
+          "badge": {
+            "label": "New",
+            "tone": "success"
+          },
+          "title": "Gasless Trading",
+          "subtitle": "Zero gas fees on every trade",
+          "body": "All transactions are sponsored — no MON needed for gas.\nSession keys mean fewer wallet pop-ups.\nSame security, smoother experience.",
+
+          "media": {
+            "type": "image",
+            "src": "https://placehold.co/800x450/0a0a0a/3b82f6?text=Gasless+Trading&font=raleway",
+            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=Gasless+Preview&font=raleway",
+            "alt": "Gasless trading interface",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "smart_accounts_slide1_viewed"
+          }
+        },
+        {
+          "id": "smart-accounts-session-keys",
+          "badge": {
+            "label": "Improved",
+            "tone": "info"
+          },
+          "title": "Session Keys",
+          "subtitle": "Approve once, trade freely",
+          "body": "One-time approval per session — no repeated wallet prompts.\nGranular permissions keep your funds safe.",
+
+          "media": {
+            "type": "image",
+            "src": "https://placehold.co/800x450/0a0a0a/60a5fa?text=Session+Keys&font=raleway",
+            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=Session+Preview&font=raleway",
+            "alt": "Session keys approval flow",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "smart_accounts_slide2_viewed"
+          }
+        }
+      ],
+
+      "cta": {
+        "label": "Enable Smart Account",
+        "action": {
+          "type": "navigate",
+          "payload": {
+            "url": "/settings"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "2026-02-08-reposcan",
+      "version": "1.8.0",
+      "title": "Reposcan Upgrade",
+      "description": "Easily do diligence on tokens by hovering the GitHub icon.",
+      "publishedAt": "2026-02-08T00:00:00Z",
+      "enabled": true,
+      "priority": 4,
+
+      "rules": {
+        "showOnce": true,
+        "dismissible": true
+      },
+
+      "theme": {
+        "accent": "orange",
+        "backgroundVariant": "flat-dark",
+        "layout": "text-only"
+      },
+
+      "analytics": {
+        "impressionEvent": "update_reposcan_viewed",
+        "dismissEvent": "update_reposcan_dismissed",
+        "ctaEvent": "update_reposcan_cta_clicked"
+      },
+
+      "slides": [
+        {
+          "id": "reposcan-overview",
+          "badge": {
+            "label": "Upgraded",
+            "tone": "warning"
+          },
+          "title": "Smarter Token Research",
+          "subtitle": "GitHub-powered insights",
+          "body": "Hover any token's GitHub icon to see repo health instantly.\nCommit frequency, contributor count, and last update date.\nSecurity audit badges from trusted providers.\nFlagged repos get a warning indicator."
+        }
+      ],
+
+      "cta": {
+        "label": "Got It",
+        "action": {
+          "type": "dismiss"
+        }
+      }
+    },
+
+    {
+      "id": "2026-02-05-mobile-portfolio",
+      "version": "1.7.0",
+      "title": "Mobile Portfolio",
+      "description": "Full portfolio experience optimized for mobile browsers.",
+      "publishedAt": "2026-02-05T00:00:00Z",
+      "enabled": true,
+      "priority": 5,
+
+      "rules": {
+        "showOnce": true,
+        "dismissible": true,
+        "platforms": ["web", "mobile"]
+      },
+
+      "theme": {
+        "accent": "red",
+        "backgroundVariant": "glass",
+        "layout": "media-right"
+      },
+
+      "analytics": {
+        "impressionEvent": "update_mobile_portfolio_viewed",
+        "dismissEvent": "update_mobile_portfolio_dismissed",
+        "ctaEvent": "update_mobile_portfolio_cta_clicked"
+      },
+
+      "slides": [
+        {
+          "id": "mobile-portfolio-overview",
+          "badge": {
+            "label": "Mobile",
+            "tone": "danger"
+          },
+          "title": "Portfolio on the Go",
+          "subtitle": "Swipe, tap, trade",
+          "body": "Responsive portfolio dashboard for mobile screens.\nSwipe between holdings, positions, and PnL.\nPush notifications for price alerts coming soon.",
+
+          "media": {
+            "type": "image",
+            "src": "https://placehold.co/400x700/0a0a0a/ef4444?text=Mobile+Portfolio&font=raleway",
+            "fallbackSrc": "https://placehold.co/400x700/1a1a2e/a1a1aa?text=Mobile+Preview&font=raleway",
+            "alt": "Mobile portfolio interface",
+            "aspectRatio": "9/16",
+            "objectFit": "contain"
+          },
+
+          "analytics": {
+            "viewEvent": "mobile_portfolio_slide1_viewed"
+          }
+        }
+      ],
+
+      "cta": {
+        "label": "View Portfolio",
+        "action": {
+          "type": "navigate",
+          "payload": {
+            "url": "/portfolio"
+          }
+        }
       }
     }
   ]
