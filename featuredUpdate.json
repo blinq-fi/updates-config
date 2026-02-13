@@ -1,28 +1,22 @@
 {
   "schemaVersion": 3,
-  "configVersion": "2026.02.11",
-  "featuredUpdateId": "2026-02-11-portfolio-v2",
+  "configVersion": "2026.02.12",
+  "featuredUpdateId": "2026-02-12-one-click-trade",
   "historyUrl": "https://blinq.fi/changelog",
   "updates": [
     {
-      "id": "2026-02-11-portfolio-v2",
-      "version": "2.0.0",
-      "title": "Portfolio V2",
-      "description": "Track holdings, PnL, and positions — all in one place.",
-      "publishedAt": "2026-02-11T00:00:00Z",
-      "expiresAt": "2026-04-01T00:00:00Z",
+      "id": "2026-02-12-one-click-trade",
+      "version": "3.0.0",
+      "title": "One-Click Trading, Rewards & More",
+      "description": "Session keys, referrals, leaderboards, and a full portfolio — all in one update.",
+      "publishedAt": "2026-02-12T00:00:00Z",
       "enabled": true,
       "priority": 1,
 
       "rules": {
-        "minAppVersion": "1.3.0",
         "showOnce": true,
         "dismissible": true,
-        "platforms": ["web"],
-        "audience": {
-          "roles": ["retail", "pro"],
-          "minTradingVolumeUsd": 0
-        }
+        "platforms": ["web"]
       },
 
       "theme": {
@@ -32,103 +26,123 @@
       },
 
       "analytics": {
-        "impressionEvent": "update_portfolio_v2_viewed",
-        "dismissEvent": "update_portfolio_v2_dismissed",
-        "ctaEvent": "update_portfolio_v2_cta_clicked"
+        "impressionEvent": "update_one_click_trade_viewed",
+        "dismissEvent": "update_one_click_trade_dismissed",
+        "ctaEvent": "update_one_click_trade_cta_clicked"
       },
 
       "slides": [
         {
-          "id": "portfolio-unified-view",
+          "id": "session-keys",
           "layout": "media-right",
           "badge": {
             "label": "New",
             "tone": "success"
           },
-          "title": "Unified Portfolio View",
-          "subtitle": "Everything at a glance",
-          "body": "See token balances, active positions, and historical PnL in a single dashboard.\nReal-time sync across all connected wallets.\nOne-click export for tax reporting.",
+          "title": "One-Click Trading",
+          "subtitle": "Sign once, trade freely for 8 hours",
+          "body": "Session keys eliminate repeated wallet pop-ups.\nOne signature unlocks seamless trading for the entire session.\nScoped permissions keep your funds safe — only USDC and prediction contracts are authorized.",
 
           "media": {
-            "type": "video",
-            "src": "https://axiom-videos.sfo3.cdn.digitaloceanspaces.com/update-41/github-x402.mp4",
-            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/10b981?text=Fallback&font=raleway",
-            "alt": "Portfolio dashboard showing balances and PnL chart",
+            "type": "image",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "alt": "One-click trading with session keys",
             "aspectRatio": "16/9",
             "objectFit": "cover"
           },
 
           "analytics": {
-            "viewEvent": "portfolio_slide1_viewed"
+            "viewEvent": "one_click_slide_viewed"
           }
         },
         {
-          "id": "portfolio-live-pnl",
+          "id": "rewards-referrals",
           "layout": "media-right",
           "badge": {
-            "label": "Improved",
+            "label": "Earn",
             "tone": "info"
           },
-          "title": "Real-Time PnL Tracking",
-          "subtitle": "Never miss a move",
-          "body": "Live profit and loss updates across all positions.\nBreakdown by token, chain, and strategy.\nCustom alerts when PnL hits your thresholds.",
+          "title": "Rewards & Referrals",
+          "subtitle": "Get rewarded for every prediction",
+          "body": "Claim your Protocol Identity — your unique @username.bq handle.\nShare your referral code and earn points from your network.\nRedeem accumulated rewards for USDC directly in-app.",
 
           "media": {
             "type": "image",
-            "src": "https://placehold.co/800x450/0a0a0a/3b82f6?text=PnL+Tracking&font=raleway",
-            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=PnL+Preview&font=raleway",
-            "alt": "Real-time PnL chart with live updates",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "alt": "Rewards and referral system",
             "aspectRatio": "16/9",
             "objectFit": "cover"
           },
 
           "analytics": {
-            "viewEvent": "portfolio_slide2_viewed"
+            "viewEvent": "rewards_referrals_slide_viewed"
           }
         },
         {
-          "id": "portfolio-token-scan",
+          "id": "leaderboard",
           "layout": "media-right",
           "badge": {
-            "label": "Beta",
+            "label": "Compete",
             "tone": "warning"
           },
-          "title": "Quick Token Scan",
-          "subtitle": "Due diligence made easy",
-          "body": "Hover the GitHub icon to instantly see repo health and security flags.\nAudit scores, liquidity depth, and holder distribution at a glance.",
+          "title": "Global Leaderboard",
+          "subtitle": "Climb the ranks",
+          "body": "Top 50 traders ranked by points, volume, and PnL.\nTrack your win rate, streaks, and performance over time.\nSee how you stack up against the best predictors on Blinq.",
 
           "media": {
             "type": "image",
-            "src": "https://placehold.co/800x450/0a0a0a/f59e0b?text=Token+Scan&font=raleway",
-            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=Scan+Preview&font=raleway",
-            "alt": "Token scan showing repo health and security flags",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "alt": "Global leaderboard showing top traders",
             "aspectRatio": "16/9",
             "objectFit": "cover"
           },
 
           "analytics": {
-            "viewEvent": "portfolio_slide3_viewed"
+            "viewEvent": "leaderboard_slide_viewed"
+          }
+        },
+        {
+          "id": "portfolio",
+          "layout": "media-right",
+          "badge": {
+            "label": "New",
+            "tone": "success"
+          },
+          "title": "Portfolio Dashboard",
+          "subtitle": "Everything at a glance",
+          "body": "View all active and settled predictions in one place.\nPnL charts, win/loss streaks, and volume analytics.\nSmart account details and referral stats at your fingertips.",
+
+          "media": {
+            "type": "image",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "alt": "Portfolio dashboard with analytics",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "portfolio_slide_viewed"
           }
         }
       ],
 
       "cta": {
-        "label": "Explore Portfolio",
+        "label": "Start Trading",
         "action": {
           "type": "navigate",
           "payload": {
-            "url": "/portfolio"
+            "url": "/price-arena"
           }
         }
       }
     },
 
     {
-      "id": "2026-02-11-candle-rush",
+      "id": "2026-01-29-gasless-social",
       "version": "2.0.0",
-      "title": "Candle Rush",
-      "description": "Predict the next candle direction and win up to 1.95x your bet.",
-      "publishedAt": "2026-02-11T00:00:00Z",
+      "title": "Gasless Trading & Social Login",
+      "description": "Zero gas fees and sign in with email or social accounts.",
+      "publishedAt": "2026-01-29T00:00:00Z",
       "enabled": true,
       "priority": 2,
 
@@ -140,81 +154,101 @@
       "theme": {
         "accent": "purple",
         "backgroundVariant": "glass",
-        "layout": "full-width"
+        "layout": "media-right"
       },
 
       "analytics": {
-        "impressionEvent": "update_candle_rush_viewed",
-        "dismissEvent": "update_candle_rush_dismissed",
-        "ctaEvent": "update_candle_rush_cta_clicked"
+        "impressionEvent": "update_gasless_social_viewed",
+        "dismissEvent": "update_gasless_social_dismissed",
+        "ctaEvent": "update_gasless_social_cta_clicked"
       },
 
       "slides": [
         {
-          "id": "candle-rush-intro",
+          "id": "gasless-txn",
           "badge": {
-            "label": "Live",
-            "tone": "danger"
+            "label": "New",
+            "tone": "success"
           },
-          "title": "Candle Rush is Here",
-          "subtitle": "Fast-paced prediction game",
-          "body": "Pick UP or DOWN on the next 1-minute candle.\n1.95x payout on correct predictions.\nNo slippage, no spreads — pure prediction.",
+          "title": "Gasless Transactions",
+          "subtitle": "Zero gas fees on every trade",
+          "body": "All transactions are sponsored — no MON needed for gas.\nPowered by ZeroDev smart accounts with built-in paymaster.\nSame security, zero friction.",
 
           "media": {
             "type": "image",
-            "src": "https://placehold.co/900x500/0a0a0a/a855f7?text=Candle+Rush&font=raleway",
-            "fallbackSrc": "https://placehold.co/900x500/1a1a2e/a1a1aa?text=Candle+Rush&font=raleway",
-            "alt": "Candle Rush game interface",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "alt": "Gasless trading powered by ZeroDev",
             "aspectRatio": "16/9",
             "objectFit": "cover"
           },
 
           "analytics": {
-            "viewEvent": "candle_rush_slide1_viewed"
+            "viewEvent": "gasless_slide_viewed"
           }
         },
         {
-          "id": "candle-rush-leaderboard",
+          "id": "social-login",
           "badge": {
-            "label": "Compete",
+            "label": "New",
             "tone": "info"
           },
-          "title": "Weekly Leaderboards",
-          "subtitle": "Climb the ranks",
-          "body": "Top predictors earn bonus rewards every week.\nTrack your win rate and streak in real time.",
+          "title": "Social Login",
+          "subtitle": "No wallet? No problem.",
+          "body": "Sign up with email, Google, or other social accounts.\nAn embedded smart wallet is created for you automatically.\nStart predicting in seconds — no extensions or seed phrases required.",
 
           "media": {
             "type": "image",
-            "src": "https://placehold.co/900x500/0a0a0a/8b5cf6?text=Leaderboard&font=raleway",
-            "fallbackSrc": "https://placehold.co/900x500/1a1a2e/a1a1aa?text=Leaderboard&font=raleway",
-            "alt": "Leaderboard showing top predictors",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "alt": "Social login options",
             "aspectRatio": "16/9",
             "objectFit": "cover"
           },
 
           "analytics": {
-            "viewEvent": "candle_rush_slide2_viewed"
+            "viewEvent": "social_login_slide_viewed"
+          }
+        },
+        {
+          "id": "ui-improvements",
+          "badge": {
+            "label": "Improved",
+            "tone": "info"
+          },
+          "title": "UI Improvements",
+          "subtitle": "Cleaner, faster, sharper",
+          "body": "Refreshed trading interface with better readability.\nImproved chart rendering and price feed performance.\nSmooth animations and transitions across all screens.",
+
+          "media": {
+            "type": "image",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "alt": "Improved UI design",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "ui_improvements_slide_viewed"
           }
         }
       ],
 
       "cta": {
-        "label": "Play Candle Rush",
+        "label": "Try It Out",
         "action": {
           "type": "navigate",
           "payload": {
-            "url": "/candle-rush"
+            "url": "/price-arena"
           }
         }
       }
     },
 
     {
-      "id": "2026-02-10-smart-accounts",
-      "version": "1.9.0",
-      "title": "Smart Account Integration",
-      "description": "Gasless transactions and session keys powered by ZeroDev.",
-      "publishedAt": "2026-02-10T00:00:00Z",
+      "id": "2026-01-16-launch",
+      "version": "1.0.0",
+      "title": "Blinq Launch",
+      "description": "Blinq is live — predict price movements and win.",
+      "publishedAt": "2026-01-16T00:00:00Z",
       "enabled": true,
       "priority": 3,
 
@@ -224,186 +258,99 @@
       },
 
       "theme": {
-        "accent": "blue",
+        "accent": "emerald",
         "backgroundVariant": "subtle-gradient",
-        "layout": "media-left"
-      },
-
-      "analytics": {
-        "impressionEvent": "update_smart_accounts_viewed",
-        "dismissEvent": "update_smart_accounts_dismissed",
-        "ctaEvent": "update_smart_accounts_cta_clicked"
-      },
-
-      "slides": [
-        {
-          "id": "smart-accounts-gasless",
-          "badge": {
-            "label": "New",
-            "tone": "success"
-          },
-          "title": "Gasless Trading",
-          "subtitle": "Zero gas fees on every trade",
-          "body": "All transactions are sponsored — no MON needed for gas.\nSession keys mean fewer wallet pop-ups.\nSame security, smoother experience.",
-
-          "media": {
-            "type": "image",
-            "src": "https://placehold.co/800x450/0a0a0a/3b82f6?text=Gasless+Trading&font=raleway",
-            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=Gasless+Preview&font=raleway",
-            "alt": "Gasless trading interface",
-            "aspectRatio": "16/9",
-            "objectFit": "cover"
-          },
-
-          "analytics": {
-            "viewEvent": "smart_accounts_slide1_viewed"
-          }
-        },
-        {
-          "id": "smart-accounts-session-keys",
-          "badge": {
-            "label": "Improved",
-            "tone": "info"
-          },
-          "title": "Session Keys",
-          "subtitle": "Approve once, trade freely",
-          "body": "One-time approval per session — no repeated wallet prompts.\nGranular permissions keep your funds safe.",
-
-          "media": {
-            "type": "image",
-            "src": "https://placehold.co/800x450/0a0a0a/60a5fa?text=Session+Keys&font=raleway",
-            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=Session+Preview&font=raleway",
-            "alt": "Session keys approval flow",
-            "aspectRatio": "16/9",
-            "objectFit": "cover"
-          },
-
-          "analytics": {
-            "viewEvent": "smart_accounts_slide2_viewed"
-          }
-        }
-      ],
-
-      "cta": {
-        "label": "Enable Smart Account",
-        "action": {
-          "type": "navigate",
-          "payload": {
-            "url": "/settings"
-          }
-        }
-      }
-    },
-
-    {
-      "id": "2026-02-08-reposcan",
-      "version": "1.8.0",
-      "title": "Reposcan Upgrade",
-      "description": "Easily do diligence on tokens by hovering the GitHub icon.",
-      "publishedAt": "2026-02-08T00:00:00Z",
-      "enabled": true,
-      "priority": 4,
-
-      "rules": {
-        "showOnce": true,
-        "dismissible": true
-      },
-
-      "theme": {
-        "accent": "orange",
-        "backgroundVariant": "flat-dark",
-        "layout": "text-only"
-      },
-
-      "analytics": {
-        "impressionEvent": "update_reposcan_viewed",
-        "dismissEvent": "update_reposcan_dismissed",
-        "ctaEvent": "update_reposcan_cta_clicked"
-      },
-
-      "slides": [
-        {
-          "id": "reposcan-overview",
-          "badge": {
-            "label": "Upgraded",
-            "tone": "warning"
-          },
-          "title": "Smarter Token Research",
-          "subtitle": "GitHub-powered insights",
-          "body": "Hover any token's GitHub icon to see repo health instantly.\nCommit frequency, contributor count, and last update date.\nSecurity audit badges from trusted providers.\nFlagged repos get a warning indicator."
-        }
-      ],
-
-      "cta": {
-        "label": "Got It",
-        "action": {
-          "type": "dismiss"
-        }
-      }
-    },
-
-    {
-      "id": "2026-02-05-mobile-portfolio",
-      "version": "1.7.0",
-      "title": "Mobile Portfolio",
-      "description": "Full portfolio experience optimized for mobile browsers.",
-      "publishedAt": "2026-02-05T00:00:00Z",
-      "enabled": true,
-      "priority": 5,
-
-      "rules": {
-        "showOnce": true,
-        "dismissible": true,
-        "platforms": ["web", "mobile"]
-      },
-
-      "theme": {
-        "accent": "red",
-        "backgroundVariant": "glass",
         "layout": "media-right"
       },
 
       "analytics": {
-        "impressionEvent": "update_mobile_portfolio_viewed",
-        "dismissEvent": "update_mobile_portfolio_dismissed",
-        "ctaEvent": "update_mobile_portfolio_cta_clicked"
+        "impressionEvent": "update_launch_viewed",
+        "dismissEvent": "update_launch_dismissed",
+        "ctaEvent": "update_launch_cta_clicked"
       },
 
       "slides": [
         {
-          "id": "mobile-portfolio-overview",
+          "id": "launch-intro",
           "badge": {
-            "label": "Mobile",
+            "label": "Live",
             "tone": "danger"
           },
-          "title": "Portfolio on the Go",
-          "subtitle": "Swipe, tap, trade",
-          "body": "Responsive portfolio dashboard for mobile screens.\nSwipe between holdings, positions, and PnL.\nPush notifications for price alerts coming soon.",
+          "title": "Blinq is Live",
+          "subtitle": "Predict. Win. Repeat.",
+          "body": "Welcome to Blinq — the prediction market on Monad.\nPredict if BTC, ETH, or SOL will go up or down.\nChoose your timeframe, place your stake, and win up to 1.95x.",
 
           "media": {
-            "type": "image",
-            "src": "https://placehold.co/400x700/0a0a0a/ef4444?text=Mobile+Portfolio&font=raleway",
-            "fallbackSrc": "https://placehold.co/400x700/1a1a2e/a1a1aa?text=Mobile+Preview&font=raleway",
-            "alt": "Mobile portfolio interface",
-            "aspectRatio": "9/16",
-            "objectFit": "contain"
+            "type": "video",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/announcement.mp4",
+            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/10b981?text=Blinq+Launch&font=raleway",
+            "alt": "Blinq launch introduction video",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
           },
 
           "analytics": {
-            "viewEvent": "mobile_portfolio_slide1_viewed"
+            "viewEvent": "launch_intro_slide_viewed"
+          }
+        },
+        {
+          "id": "price-arena",
+          "badge": {
+            "label": "Core",
+            "tone": "success"
+          },
+          "title": "Price Arena",
+          "subtitle": "Your prediction playground",
+          "body": "Pick Up or Down on BTC, SOL, and ETH across 5m, 15m, 30m, and 1h windows.\nRelative predictions — guess which asset outperforms the rest.\nLive TradingView charts with real-time price feeds.",
+
+          "media": {
+            "type": "image",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=Price+Arena&font=raleway",
+            "alt": "Price Arena prediction interface",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "price_arena_slide_viewed"
+          }
+        },
+        {
+          "id": "metamask-connect",
+          "badge": {
+            "label": "Wallet",
+            "tone": "neutral"
+          },
+          "title": "Connect with MetaMask",
+          "subtitle": "Your keys, your predictions",
+          "body": "Connect your MetaMask wallet to get started.\nDeposit USDC on Monad and start predicting instantly.\nFull self-custody — your funds stay in your control.",
+
+          "media": {
+            "type": "image",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "fallbackSrc": "https://placehold.co/800x450/1a1a2e/a1a1aa?text=MetaMask&font=raleway",
+            "alt": "MetaMask wallet connection",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+
+          "analytics": {
+            "viewEvent": "metamask_slide_viewed"
           }
         }
       ],
 
       "cta": {
-        "label": "View Portfolio",
+        "label": "Enter Price Arena",
         "action": {
           "type": "navigate",
           "payload": {
-            "url": "/portfolio"
+            "url": "/price-arena"
           }
         }
       }
     }
   ]
 }
+
