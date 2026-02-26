@@ -1,9 +1,102 @@
 {
   "schemaVersion": 3,
-  "configVersion": "2026.02.12",
-  "featuredUpdateId": "2026-02-12-one-click-trade",
+  "configVersion": "2026.02.26",
+  "featuredUpdateId": "2026-02-26-quests",
   "historyUrl": "https://blinq.fi/changelog",
   "updates": [
+    {
+      "id": "2026-02-26-quests",
+      "version": "4.0.0",
+      "title": "Quests Are Live",
+      "description": "Complete quests, earn raffle tickets, and climb the leaderboard.",
+      "publishedAt": "2026-02-26T00:00:00Z",
+      "enabled": true,
+      "priority": 1,
+
+      "rules": {
+        "showOnce": true,
+        "dismissible": true,
+        "platforms": ["web"]
+      },
+
+      "theme": {
+        "accent": "orange",
+        "backgroundVariant": "subtle-gradient",
+        "layout": "media-right"
+      },
+
+      "analytics": {
+        "impressionEvent": "update_quests_viewed",
+        "dismissEvent": "update_quests_dismissed",
+        "ctaEvent": "update_quests_cta_clicked"
+      },
+
+      "slides": [
+        {
+          "id": "quests-intro",
+          "layout": "media-right",
+          "badge": {
+            "label": "New",
+            "tone": "success"
+          },
+          "title": "Quests",
+          "subtitle": "Complete tasks, earn rewards",
+          "body": "Browse daily and weekly quests in the new sidebar.\nComplete social and trading quests to earn raffle tickets.\nTrack your progress and claim rewards directly in-app.",
+
+          "media": {
+            "type": "video",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/quests%20clip.mp4",
+            "alt": "Quests system walkthrough",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
+          },
+
+          "analytics": {
+            "viewEvent": "quests_intro_slide_viewed"
+          }
+        },
+        {
+          "id": "raffle-tickets",
+          "layout": "media-right",
+          "badge": {
+            "label": "Earn",
+            "tone": "warning"
+          },
+          "title": "Raffle Tickets",
+          "subtitle": "Every quest earns you entries",
+          "body": "Earn raffle tickets by completing quests.\nMore tickets mean higher chances in upcoming draws.\nCategories include social engagement, trading milestones, and referrals.",
+
+          "media": {
+            "type": "video",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/rewards.mp4",
+            "alt": "Raffle tickets and rewards",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
+          },
+
+          "analytics": {
+            "viewEvent": "raffle_tickets_slide_viewed"
+          }
+        }
+      ],
+
+      "cta": {
+        "label": "View Quests",
+        "action": {
+          "type": "navigate",
+          "payload": {
+            "url": "/quests"
+          }
+        }
+      }
+    },
+
     {
       "id": "2026-02-12-one-click-trade",
       "version": "3.0.0",
@@ -11,7 +104,7 @@
       "description": "Session keys, referrals, leaderboards, and a full portfolio — all in one update.",
       "publishedAt": "2026-02-12T00:00:00Z",
       "enabled": true,
-      "priority": 1,
+      "priority": 2,
 
       "rules": {
         "showOnce": true,
@@ -67,11 +160,14 @@
           "body": "Claim your Protocol Identity — your unique @username.bq handle.\nShare your referral code and earn points from your network.\nRedeem accumulated rewards for USDC directly in-app.",
 
           "media": {
-            "type": "image",
-            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "type": "video",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/rewards.mp4",
             "alt": "Rewards and referral system",
             "aspectRatio": "16/9",
-            "objectFit": "cover"
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
           },
 
           "analytics": {
@@ -144,7 +240,7 @@
       "description": "Zero gas fees and sign in with email or social accounts.",
       "publishedAt": "2026-01-29T00:00:00Z",
       "enabled": true,
-      "priority": 2,
+      "priority": 3,
 
       "rules": {
         "showOnce": true,
@@ -175,11 +271,14 @@
           "body": "All transactions are sponsored — no MON needed for gas.\nPowered by ZeroDev smart accounts with built-in paymaster.\nSame security, zero friction.",
 
           "media": {
-            "type": "image",
-            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "type": "video",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/gasless%20fee%20clip-1772105946752.mp4",
             "alt": "Gasless trading powered by ZeroDev",
             "aspectRatio": "16/9",
-            "objectFit": "cover"
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
           },
 
           "analytics": {
@@ -197,11 +296,14 @@
           "body": "Sign up with email, Google, or other social accounts.\nAn embedded smart wallet is created for you automatically.\nStart predicting in seconds — no extensions or seed phrases required.",
 
           "media": {
-            "type": "image",
-            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "type": "video",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social%20logins.mp4",
             "alt": "Social login options",
             "aspectRatio": "16/9",
-            "objectFit": "cover"
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
           },
 
           "analytics": {
@@ -250,7 +352,7 @@
       "description": "Blinq is live — predict price movements and win.",
       "publishedAt": "2026-01-16T00:00:00Z",
       "enabled": true,
-      "priority": 3,
+      "priority": 4,
 
       "rules": {
         "showOnce": true,
