@@ -41,7 +41,7 @@
           },
           "title": "Candle Rush",
           "subtitle": "Real-time crypto price prediction",
-          "body": "Candle Rush is now live on Blinq, a real-time crypto price-prediction mini-game.\nPredict BTC/USD, ETH/USD, and SOL/USD candles by choosing GREEN or RED.\nRound modes: 5m Sprint (fast rounds, quick decisions), 15m Standard (balanced pace, steady action), and 30m Pro (longer rounds, higher-conviction calls).\nEach round auto-settles at candle close, so results are instant and transparent.\nRush in, progress through Candle Rush quests, and stack wins + rewards.",
+          "body": "Candle Rush is now live on Blinq, a real-time crypto price-prediction mini-game.\nPredict BTC/USD, ETH/USD, and SOL/USD by choosing GREEN or RED across 5m Sprint, 15m Standard, and 30m Pro modes.\nEach round auto-settles at candle close, so results are instant and transparent.\nRush in, progress through Candle Rush quests, and stack wins + rewards.",
 
           "media": {
             "type": "video",
