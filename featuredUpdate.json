@@ -1,15 +1,15 @@
 {
   "schemaVersion": 3,
-  "configVersion": "2026.02.26",
-  "featuredUpdateId": "2026-02-26-quests",
+  "configVersion": "2026.03.03",
+  "featuredUpdateId": "2026-03-03-candle-rush",
   "historyUrl": "https://blinq.fi/changelog",
   "updates": [
     {
-      "id": "2026-02-26-quests",
-      "version": "4.0.0",
-      "title": "Quests Are Live",
-      "description": "Complete quests, earn raffle tickets, and climb the leaderboard.",
-      "publishedAt": "2026-02-26T00:00:00Z",
+      "id": "2026-03-03-candle-rush",
+      "version": "5.0.0",
+      "title": "Candle Rush Is Live",
+      "description": "Predict BTC/USD, ETH/USD, and SOL/USD candles in Blinq's real-time mini-game.",
+      "publishedAt": "2026-03-03T00:00:00Z",
       "enabled": true,
       "priority": 1,
 
@@ -20,33 +20,33 @@
       },
 
       "theme": {
-        "accent": "orange",
+        "accent": "red",
         "backgroundVariant": "subtle-gradient",
         "layout": "media-right"
       },
 
       "analytics": {
-        "impressionEvent": "update_quests_viewed",
-        "dismissEvent": "update_quests_dismissed",
-        "ctaEvent": "update_quests_cta_clicked"
+        "impressionEvent": "update_candle_rush_viewed",
+        "dismissEvent": "update_candle_rush_dismissed",
+        "ctaEvent": "update_candle_rush_cta_clicked"
       },
 
       "slides": [
         {
-          "id": "quests-intro",
+          "id": "candle-rush-intro",
           "layout": "media-right",
           "badge": {
-            "label": "New",
+            "label": "Live",
             "tone": "success"
           },
-          "title": "Quests",
-          "subtitle": "Complete tasks, earn rewards",
-          "body": "Browse daily and weekly quests in the new sidebar.\nComplete social and trading quests to earn raffle tickets.\nTrack your progress and claim rewards directly in-app.",
+          "title": "Candle Rush",
+          "subtitle": "Real-time crypto price prediction",
+          "body": "Candle Rush is now live on Blinq, a real-time crypto price-prediction mini-game.\nPredict BTC/USD, ETH/USD, and SOL/USD candles by choosing GREEN or RED in upgraded round modes:\n5m Sprint: fast rounds, quick decisions\n15m Standard: balanced pace, steady action\n30m Pro: longer rounds, higher-conviction calls\nEach round auto-settles at candle close, so results are instant and transparent.\nRush in, progress through Candle Rush quests, and stack wins + rewards.",
 
           "media": {
             "type": "video",
-            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/quests%20clip.mp4",
-            "alt": "Quests system walkthrough",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/candlerush%20walkthrough.mp4",
+            "alt": "Candle Rush gameplay walkthrough",
             "aspectRatio": "16/9",
             "objectFit": "cover",
             "autoplay": true,
@@ -55,43 +55,17 @@
           },
 
           "analytics": {
-            "viewEvent": "quests_intro_slide_viewed"
-          }
-        },
-        {
-          "id": "raffle-tickets",
-          "layout": "media-right",
-          "badge": {
-            "label": "Earn",
-            "tone": "warning"
-          },
-          "title": "Raffle Tickets",
-          "subtitle": "Every quest earns you entries",
-          "body": "Earn raffle tickets by completing quests.\nMore tickets mean higher chances in upcoming draws.\nCategories include social engagement, trading milestones, and referrals.",
-
-          "media": {
-            "type": "video",
-            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/rewards.mp4",
-            "alt": "Raffle tickets and rewards",
-            "aspectRatio": "16/9",
-            "objectFit": "cover",
-            "autoplay": true,
-            "loop": true,
-            "muted": true
-          },
-
-          "analytics": {
-            "viewEvent": "raffle_tickets_slide_viewed"
+            "viewEvent": "candle_rush_intro_slide_viewed"
           }
         }
       ],
 
       "cta": {
-        "label": "View Quests",
+        "label": "Play Candle Rush",
         "action": {
           "type": "navigate",
           "payload": {
-            "url": "/quests"
+            "url": "/candle-rush"
           }
         }
       }
@@ -455,4 +429,3 @@
     }
   ]
 }
-
