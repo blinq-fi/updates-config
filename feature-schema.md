@@ -248,6 +248,7 @@ Supported values:
 - `"purple"`
 - `"orange"`
 - `"red"`
+- `"cyan"`
 
 Mapped internally to design tokens.
 

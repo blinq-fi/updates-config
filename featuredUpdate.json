@@ -1,9 +1,94 @@
 {
   "schemaVersion": 3,
-  "configVersion": "2026.03.03",
-  "featuredUpdateId": "2026-03-03-candle-rush",
+  "configVersion": "2026.03.17",
+  "featuredUpdateId": "2026-03-17-strategy-mode",
   "historyUrl": "https://blinq.fi/changelog",
   "updates": [
+    {
+      "id": "2026-03-17-strategy-mode",
+      "version": "6.0.0",
+      "title": "Strategy Mode is Live",
+      "description": "Virtual Funds, Live Price Action, and risk-free training — all in the new Strategy Mode.",
+      "publishedAt": "2026-03-17T00:00:00Z",
+      "enabled": true,
+      "priority": 1,
+
+      "rules": {
+        "showOnce": true,
+        "dismissible": true,
+        "platforms": ["web"]
+      },
+
+      "theme": {
+        "accent": "cyan",
+        "backgroundVariant": "subtle-gradient",
+        "layout": "media-right"
+      },
+
+      "analytics": {
+        "impressionEvent": "update_strategy_mode_viewed",
+        "dismissEvent": "update_strategy_mode_dismissed",
+        "ctaEvent": "update_strategy_mode_cta_clicked"
+      },
+
+      "slides": [
+        {
+          "id": "strategy-mode-features",
+          "layout": "media-right",
+          "badge": {
+            "label": "New",
+            "tone": "info"
+          },
+          "title": "Strategy Mode: Live Features",
+          "subtitle": "Trade with Virtual Funds",
+          "body": "Virtual Funds: Trade with simulated USDC (no real money).\nLive Price Action: Real-time market data used for all virtual predictions.\nInstant Toggle: Seamless one-click switch between Live and Demo.\nPerformance Training: Track win rates and test strategies risk-free.\nDistinct UI: Cyan color-coding to clearly signal demo mode.",
+          "media": {
+            "type": "video",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/sandbox%20trailer_1.mp4",
+            "alt": "Strategy Mode gameplay trailer",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
+          },
+          "analytics": {
+            "viewEvent": "strategy_mode_features_slide_viewed"
+          }
+        },
+        {
+          "id": "onboarding-pointers",
+          "layout": "media-right",
+          "badge": {
+            "label": "Guide",
+            "tone": "success"
+          },
+          "title": "Onboarding Screen: Key Pointers",
+          "subtitle": "Blinq Ecosystem Roadmap",
+          "body": "Price Arena: Intro to Up/Down and Momentum prediction modes.\nCandle Rush: Quick-play real-time candle outcome predictions.\nStrategy Mode: Highlight the \"Trial Run\" feature for new users.\nRewards System: Summarize XP, Quests, and Leaderboard tiers.\nOn-Chain Speed: Emphasize instant settlement and transparent results.",
+          "media": {
+            "type": "image",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
+            "alt": "Onboarding screen key pointers",
+            "aspectRatio": "16/9",
+            "objectFit": "cover"
+          },
+          "analytics": {
+            "viewEvent": "onboarding_pointers_slide_viewed"
+          }
+        }
+      ],
+
+      "cta": {
+        "label": "Try It Risk-Free",
+        "action": {
+          "type": "navigate",
+          "payload": {
+            "url": "/price-arena"
+          }
+        }
+      }
+    },
     {
       "id": "2026-03-03-candle-rush",
       "version": "5.0.0",
