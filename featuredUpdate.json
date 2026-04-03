@@ -43,11 +43,14 @@
           "subtitle": "Fund your account from any chain",
           "body": "Deposit USDC from Ethereum, Arbitrum, Base, and more — directly into your Blinq account.\nAutomatic bridging handles the cross-chain transfer behind the scenes.\nReal-time fee estimation so you know exactly what you'll receive.\nJurisdiction consent and compliance checks built into the flow.",
           "media": {
-            "type": "image",
+            "type": "video",
             "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/crosschain-update.mp4",
             "alt": "Cross-chain deposit flow",
             "aspectRatio": "16/9",
-            "objectFit": "cover"
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
           },
           "analytics": {
             "viewEvent": "crosschain_deposit_intro_slide_viewed"
@@ -64,11 +67,14 @@
           "subtitle": "Recover stuck deposits instantly",
           "body": "New Rescue Funds feature detects stuck cross-chain deposits automatically.\nOne-click recovery sends funds back to your source-chain wallet.\nClear gas and fee breakdowns before confirming any rescue transaction.\nFull analytics tracking so you always know the status of your funds.",
           "media": {
-            "type": "image",
+            "type": "video",
             "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/crosschain-update.mp4",
             "alt": "Rescue funds recovery screen",
             "aspectRatio": "16/9",
-            "objectFit": "cover"
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
           },
           "analytics": {
             "viewEvent": "rescue_funds_slide_viewed"
