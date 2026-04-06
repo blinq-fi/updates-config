@@ -1,9 +1,73 @@
 {
   "schemaVersion": 3,
-  "configVersion": "2026.04.03",
-  "featuredUpdateId": "2026-04-03-crosschain-deposit",
+  "configVersion": "2026.04.06",
+  "featuredUpdateId": "2026-04-06-live-stocks",
   "historyUrl": "https://blinq.fi/changelog",
   "updates": [
+    {
+      "id": "2026-04-06-live-stocks",
+      "version": "8.0.0",
+      "title": "Live Stocks Are Here",
+      "description": "Trade predictions on AAPL, AMZN, TSLA, NVDA, GOOG, META, and NFLX — live on Blinq.",
+      "publishedAt": "2026-04-06T00:00:00Z",
+      "enabled": true,
+      "priority": 1,
+
+      "rules": {
+        "showOnce": true,
+        "dismissible": true,
+        "platforms": ["web"]
+      },
+
+      "theme": {
+        "accent": "emerald",
+        "backgroundVariant": "subtle-gradient",
+        "layout": "media-right"
+      },
+
+      "analytics": {
+        "impressionEvent": "update_live_stocks_viewed",
+        "dismissEvent": "update_live_stocks_dismissed",
+        "ctaEvent": "update_live_stocks_cta_clicked"
+      },
+
+      "slides": [
+        {
+          "id": "live-stocks-intro",
+          "layout": "media-right",
+          "badge": {
+            "label": "New",
+            "tone": "success"
+          },
+          "title": "Stock Predictions Are Live",
+          "subtitle": "Predict top US tech stocks",
+          "body": "Apple, Amazon, Tesla, NVIDIA, Google, Meta, and Netflix are now live on Blinq.\nPredict stock price movements using Up/Down and Momentum modes.\nReal-time price feeds with the same instant settlement you know from crypto.\nStocks join Gold, Silver, and Crude Oil in the expanding Blinq asset lineup.",
+          "media": {
+            "type": "video",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/stocks%20walkthrough.mp4",
+            "alt": "Live stocks trading on Blinq",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
+          },
+          "analytics": {
+            "viewEvent": "live_stocks_intro_slide_viewed"
+          }
+        }
+      ],
+
+      "cta": {
+        "label": "Trade Stocks Now",
+        "action": {
+          "type": "navigate",
+          "payload": {
+            "url": "/price-arena"
+          }
+        }
+      }
+    },
     {
       "id": "2026-04-03-crosschain-deposit",
       "version": "7.0.0",
@@ -11,7 +75,7 @@
       "description": "Deposit from any chain and recover stuck funds with the new Rescue Funds feature.",
       "publishedAt": "2026-04-03T00:00:00Z",
       "enabled": true,
-      "priority": 1,
+      "priority": 2,
 
       "rules": {
         "showOnce": true,
@@ -90,13 +154,13 @@
       }
     },
     {
-      "id": "2026-03-17-strategy-mode",
+      "id": "2026-03-17-zero-risk-mode",
       "version": "6.0.0",
-      "title": "Strategy Mode is Live",
-      "description": "Virtual Funds, Live Price Action, and risk-free training — all in the new Strategy Mode.",
+      "title": "Zero Risk Mode is Live",
+      "description": "Virtual Funds, Live Price Action, and risk-free training — all in the new Zero Risk Mode.",
       "publishedAt": "2026-03-17T00:00:00Z",
       "enabled": true,
-      "priority": 2,
+      "priority": 3,
 
       "rules": {
         "showOnce": true,
@@ -105,40 +169,37 @@
       },
 
       "theme": {
-        "accent": "cyan",
+        "accent": "orange",
         "backgroundVariant": "subtle-gradient",
         "layout": "media-right"
       },
 
       "analytics": {
-        "impressionEvent": "update_strategy_mode_viewed",
-        "dismissEvent": "update_strategy_mode_dismissed",
-        "ctaEvent": "update_strategy_mode_cta_clicked"
+        "impressionEvent": "update_zero_risk_mode_viewed",
+        "dismissEvent": "update_zero_risk_mode_dismissed",
+        "ctaEvent": "update_zero_risk_mode_cta_clicked"
       },
 
       "slides": [
         {
-          "id": "strategy-mode-features",
+          "id": "zero-risk-mode-features",
           "layout": "media-right",
           "badge": {
             "label": "New",
             "tone": "info"
           },
-          "title": "Strategy Mode: Live Features",
+          "title": "Zero Risk Mode: Live Features",
           "subtitle": "Trade with Virtual Funds",
-          "body": "Virtual Funds: Trade with simulated USDC (no real money).\nLive Price Action: Real-time market data used for all virtual predictions.\nInstant Toggle: Seamless one-click switch between Live and Demo.\nPerformance Training: Track win rates and test strategies risk-free.\nDistinct UI: Cyan color-coding to clearly signal demo mode.",
+          "body": "Virtual Funds: Trade with simulated USDC (no real money).\nLive Price Action: Real-time market data used for all virtual predictions.\nInstant Toggle: Seamless one-click switch between Live and Zero Risk.\nPerformance Training: Track win rates and test strategies risk-free.\nAuto-Enable: Zero Risk Mode activates automatically when your balance is below 0.1 USDC.",
           "media": {
-            "type": "video",
-            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/sandbox%20trailer_1.mp4",
-            "alt": "Strategy Mode gameplay trailer",
+            "type": "image",
+            "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/zero%20risk%20mode.png",
+            "alt": "Zero Risk Mode",
             "aspectRatio": "16/9",
-            "objectFit": "cover",
-            "autoplay": true,
-            "loop": true,
-            "muted": true
+            "objectFit": "cover"
           },
           "analytics": {
-            "viewEvent": "strategy_mode_features_slide_viewed"
+            "viewEvent": "zero_risk_mode_features_slide_viewed"
           }
         },
         {
@@ -150,7 +211,7 @@
           },
           "title": "Onboarding Screen: Key Pointers",
           "subtitle": "Blinq Ecosystem Roadmap",
-          "body": "Price Arena: Intro to Up/Down and Momentum prediction modes.\nCandle Rush: Quick-play real-time candle outcome predictions.\nStrategy Mode: Highlight the \"Trial Run\" feature for new users.\nRewards System: Summarize XP, Quests, and Leaderboard tiers.\nOn-Chain Speed: Emphasize instant settlement and transparent results.",
+          "body": "Price Arena: Intro to Up/Down and Momentum prediction modes.\nCandle Rush: Quick-play real-time candle outcome predictions.\nZero Risk Mode: Highlight the \"Trial Run\" feature for new users.\nRewards System: Summarize XP, Quests, and Leaderboard tiers.\nOn-Chain Speed: Emphasize instant settlement and transparent results.",
           "media": {
             "type": "image",
             "src": "https://raw.githubusercontent.com/blinq-fi/brand-assets/main/social_preview_1x.webp",
@@ -181,7 +242,7 @@
       "description": "Predict BTC/USD, ETH/USD, and SOL/USD candles in Blinq's real-time mini-game.",
       "publishedAt": "2026-03-03T00:00:00Z",
       "enabled": true,
-      "priority": 2,
+      "priority": 3,
 
       "rules": {
         "showOnce": true,
@@ -248,7 +309,7 @@
       "description": "Session keys, referrals, leaderboards, and a full portfolio — all in one update.",
       "publishedAt": "2026-02-12T00:00:00Z",
       "enabled": true,
-      "priority": 3,
+      "priority": 4,
 
       "rules": {
         "showOnce": true,
@@ -384,7 +445,7 @@
       "description": "Zero gas fees and sign in with email or social accounts.",
       "publishedAt": "2026-01-29T00:00:00Z",
       "enabled": true,
-      "priority": 4,
+      "priority": 5,
 
       "rules": {
         "showOnce": true,
@@ -496,7 +557,7 @@
       "description": "Blinq is live — predict price movements and win.",
       "publishedAt": "2026-01-16T00:00:00Z",
       "enabled": true,
-      "priority": 5,
+      "priority": 6,
 
       "rules": {
         "showOnce": true,
